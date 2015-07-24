@@ -2,10 +2,15 @@
 
 {% block content %}
     {% for post in posts %}
-    <li>
-      <h2><a href={{ post.url_link }}>{{ post.title }}</a></h2>
-      <p>{{ post.rep_num}}</p>
-      <p>{{ post.body}}</p>
-    </li>
+    <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><a href={{ post.url_link }}>{{ post.title }}</a></h3>
+            </div>
+            <div class="panel-body">
+              <p>{{ post.rep_num}}</p>
+              <p>{{ post.body}}</p>
+            </div>
+          </div>
     {% endfor %}
 {% endblock %}
+
